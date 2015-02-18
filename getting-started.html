@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vlabs" >
+    <head>
+        <link href="assets/img/favico.ico" rel="shortcut icon">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <title>
+            National Security Database - Pentest Labs
+        </title><!-- CSS  -->
+        <link href="assets/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
+        <link href="assets/css/prism.css" media="screen,projection" rel="stylesheet" type="text/css">
+        <link href="assets/css/omnibar.css" media="screen,projection" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+    </head>
+    
+	<body class=" grey lighten-4" style="padding-bottom: 60px;">
+		<header>
+            <ul class="side-nav" id="nav-mobile">
+				<li class="logo">
+					<a class="brand-logo" href="#" id="logo-container"><img src="assets/img/logox128.png" style="height:120px"></a>
+				</li>
+				<li class="bold">
+					<a class="waves-effect waves-teal" href="#">Course Intro</a>
+				</li>
+				<li class="bold">
+					<a class="waves-effect waves-teal" href="#">Getting Started</a>
+				</li>		
+				<li class="no-padding">
+						<ul class="collapsible collapsible-accordion">
+					
+							<li class="bold"><a class="collapsible-header  waves-effect waves-teal">Level 1</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>
+							<li class="bold"><a class="collapsible-header  waves-effect waves-teal">Level 2</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>
+							<li class="bold"><a class="collapsible-header waves-effect waves-teal">Level 3</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>
+							<li class="bold"><a class="collapsible-header waves-effect waves-teal">Level 4</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>
+							<li class="bold"><a class="collapsible-header waves-effect waves-teal">Level 5</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>
+<!--
+							<li class="bold"><a class="collapsible-header waves-effect waves-teal">Level 3</a>
+							  <div class="collapsible-body">
+								<ul>
+								</ul>
+							  </div>
+							</li>																					
+-->
+						</ul>
+					</li>
+				
+				<li class="bold">
+					<a class="waves-effect waves-teal" href="#">Support</a>
+				</li>
+            </ul>			
+		
+		</header>
+        <div class="navbar-fixed">
+	        <!-- Dropdown Structure -->
+			<ul id="profileMenu" class="dropdown-content">
+			  <li><a href="#!">This Is Long</a></li>
+			  <li><a href="#!">two</a></li>
+			  <li class="divider"></li>
+			  <li><a href="#!">three</a></li>
+			</ul>
+            
+            <nav class="nsdblue">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a class="brand-logo" href="index.html" id="logo-container" style="font-family: 'Squada One', cursive;">nsd.academy</a>
+						<ul class="right">
+							<li style="line-height: 195px;">
+								<a class=" dropdown-button btn-floating btn-large waves-effect waves-light orange" data-activates="profileMenu"><i class="mdi-action-face-unlock"></i></a>
+                            </li>
+						</ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <main class="full-width">
+            <div class="container-fluid">
+				<div ui-view></div>
+            </div>
+        </main>
+        <footer class="footer-custom nsdblue fixed">
+				<!-- Dropdown Trigger -->
+				<li style="list-style:none;">
+				   <a id="step4" class="right-menu" data-activates="nav-mobile" href="#"><i class="medium mdi-navigation-menu white-text pad-right"></i></a>
+				</li>
+				<li class="center">
+					<isteven-omni-bar current-value="percentageValue">
+    					{{percentageValue}}
+					</isteven-omni-bar>						
+				</li>
+        </footer>
+		
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script> 
+        <script src="assets/js/materialize.min.js"></script>
+        <script src="assets/js/prism.js"></script>
+        
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/angular-ui-router.min.js"></script>
+        <script src="assets/js/angular-animate.js"></script>
+        <script src="assets/js/toaster.js"></script>
+        <script src="assets/js/omnibar.js"></script>
+        <script src="vlabs.js"></script>
+        <script src="assets/js/terminal.js"></script>
+        <script src="assets/js/v.filesystem.js"></script>
+        <script src="assets/js/v.implementations.js"></script>
+        <script src="assets/js/v.tools.js"></script>
+<!--
+        <script src="assets/js/lab-1.js"></script>
+-->
+        <script>
+			(function($){
+			  $(function(){
+			
+				$('.button-collapse').sideNav();
+				$('.right-menu').sideNav();
+				$('.collapsible').collapsible({
+					accordion : true
+				});
+				$('.dropdown-button').dropdown({
+				      inDuration: 300,
+				      outDuration: 225,
+				      constrain_width: false, // Does not change width of dropdown to that of the activator
+				      hover: false, // Activate on click
+				      alignment: 'left', // Aligns dropdown to left or right edge (works with constrain_width)
+				      gutter: 0, // Spacing from edge
+				      belowOrigin: true // Displays dropdown below the button
+				    }
+				);
+				
+			 }); // end of document ready
+			})(jQuery); // end of jQuery name space
+        </script>
+    </body>
+</html>

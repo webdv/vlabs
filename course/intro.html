@@ -1,0 +1,89 @@
+<head>
+	<!-- Add IntroJs styles -->
+    <link href="assets/css/introjs.min.css" rel="stylesheet">
+</head>
+<div class="row">
+	<div class="col s12 m6 l5">
+		<h4><span class="pink-text lighten-1">1.0</span> | Getting Started  </h4>
+		<ol id="step1">
+		<li class="instructions">
+			Welcome on board, this is an Interactive Virtual Labs focused to help you learn penetration testing in safe environment where no damage is caused to any systems. 
+		</li>
+		<a class="btn nsdblue waves-effect waves-light teal" href="javascript:void(0);" onclick="startIntro();">Take a Tour</a>
+		<li class="instructions">
+			You will be working in a virtual terminal on your right which resembles a Linux shell, where you will practice command/tools/software related to penetration testing. This window will serve as back-end theory section where background knowledge of the current lab will be supplemented with.
+		</li>
+		<li class="instructions">
+			Below this text is your objectives section, which display current objectives to be finished to move to the next lab.
+		</li>
+		</ol>
+		<div id="step2" class="card">
+            <div class="card-content grey-text text-darken-1">
+              <span class="card-title grey-text text-darken-2">Objectives</span>
+              <ol>
+              	<li>Wander Around the shell. It maybe a tiny shell with no more than a few commands, but you will get the feel!</li>
+				<li>When you are finished, type "choose redpill" to move to the next lab.</li>
+              </ol>
+            </div>
+            <div id="step5" class="card-action">
+              <a href="#">Linux Command Cheat Sheet!</a>
+              <a href='#'>Awesome Linux Material</a>
+            </div>
+          </div>
+
+
+
+	</div> <!-- Left Part -->
+
+
+
+	<div id="step3" class="col s12 m6 l7 box clouds grey-text text-darken-3 height-issue" id="terminal-app">
+		<div class="vlabs-terminal">
+                <div ng-show="theme == 'vintage'">
+                    <terminal terminal-class="vintage-terminal" terminal-config="vintage">
+                    </terminal>
+                </div>
+		</div>
+	</div> <!-- Right Part-->
+</div>
+<script>
+	Prism.highlightAll();
+</script>
+    <script type="text/javascript" src="assets/js/intro.min.js"></script>
+    <script type="text/javascript">
+      function startIntro(){
+        var intro = introJs();
+          intro.setOptions({
+            steps: [
+              { 
+                intro: "Welcome to the tour, click next to continue!"
+              },
+              {
+                element: document.querySelectorAll('#step1')[0],
+                intro: "This part of the screen offers you a knowledge/help related to the lab exercise."
+              },
+              {
+                element: document.querySelectorAll('#step2')[0],
+                intro: "This is the Objective window, gives you precise instructions on what to do.",
+                position: 'right'
+              },
+              {
+                element: document.querySelectorAll('#step3')[0],
+                intro: "This is the terminal window, this is where you will perform your exercises.",
+                position: 'bottom'
+              },
+              {
+                element: '#step4',
+                intro: "The Navigation Menu, Navigate forward/backward through the Labs.",
+                position: 'top'
+              },
+              {
+                element: document.querySelectorAll('#step5')[0],
+                intro: "Oh! Almost Forgot, Here is where you will find informational links, Happy Research!",
+                position: 'top'
+              }, 
+            ]
+          });
+          intro.start();
+      }
+    </script>
